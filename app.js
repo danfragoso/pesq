@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const port = process.env.PORT || 3002;
 const path = require('path');
 
 let prices = ['R$ 20 - R$ 90','R$ 2 - R$ 50','R$ 40 - R$ 100','R$ 8 - R$ 120','R$ 200 - R$ 400'];
@@ -39,4 +40,4 @@ app.get('/data', (req, res) => {
   res.send(data);
 });
 
-app.listen(2999);
+app.listen(port);
